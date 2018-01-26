@@ -1,5 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).You can find the most recent version of guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
+# Global packages
+```
+npm install -g create-react-app
+npm install -g serve
+```
+
 # bash_profile
 1. `vim ~/.bash_profile`
 1. paste the following config
@@ -21,8 +27,8 @@ PS1="$GREEN\u@\h$NO_COLOR:\w$YELLOW\$(parse_git_branch)$NO_COLOR\$ "
 ```
 # This is Git's per-user configuration file.
 [user]
-        name = %YOUR_NAME%
-        email = %YOUR_EMAIL%
+  name = %YOUR_NAME%
+  email = %YOUR_EMAIL%
 
 [alias]
   co = checkout
