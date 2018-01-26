@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.png';
-import './App.css';
+import logo from '../../common/statics/image/logo.png';
+import './style.css';
 
 class App extends Component {
   render() {
@@ -11,7 +11,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          To get started, edit <code>src/components/App/index.js</code> and save to reload.
         </p>
       </div>
     );
