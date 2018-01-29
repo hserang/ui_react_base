@@ -33,7 +33,11 @@ Using three main package
 
 # Formatting Code
 
-[Prettier](https://prettier.io/) is an opinionated code formatter with support for JavaScript, CSS and JSON. It's setup to run as `precommit` in this repo, you also can do [editor integration](https://prettier.io/docs/en/editors.html) and activate on save auto format in your IDE. [Options](https://prettier.io/docs/en/options.html) can be set in `.prettierrc.json` file
+[Prettier](https://prettier.io/) is an opinionated code formatter with support for JavaScript, CSS and [more](https://prettier.io/docs/en/language-support.html). It's setup to run as `precommit` in this repo, you also can do [editor integration](https://prettier.io/docs/en/editors.html) and activate on save auto format in your IDE. [Options](https://prettier.io/docs/en/options.html) can be set in `.prettierrc.json` file
+
+# ESLint
+
+create-react-app comes with ESLint already setup in this repo we just make sure ESLint and Prettier are integrated correctly. To display lint output in your editor just install the plugin and you are good to go. Use `.eslintrc` file to configure more rules and plugings.
 
 # bash_profile
 
