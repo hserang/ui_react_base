@@ -1,13 +1,24 @@
 import React, { Component } from 'react'
-import logo from '../../common/statics/image/logo.png'
-import './style.css'
+import Loadable from 'react-loadable'
+import AsyncLoading from '../common/AsyncLoading.js'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-import About from '../About'
-import Contact from '../Contact'
 import Home from '../Home'
+import logo from '../common/statics/image/logo.png'
+import './style.css'
 
 class App extends Component {
   render() {
+    const asyncAbout = Loadable({
+      loader: () => import('../About'),
+      loading: AsyncLoading
+    })
+
+    const asyncContact = Loadable({
+      loader: () => import('../Contact'),
+      loading: AsyncLoading
+    })
+    asyncContact.preload()
+
     return (
       <Router>
         <div className="app">
@@ -22,8 +33,8 @@ class App extends Component {
           <div className="app-body">
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route path="/about" component={About} />
-              <Route path="/contact" component={Contact} />
+              <Route path="/about" component={asyncAbout} />
+              <Route path="/contact" component={asyncContact} />
             </Switch>
           </div>
         </div>
