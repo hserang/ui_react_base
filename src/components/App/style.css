@@ -8,8 +8,17 @@ body {
   background-color: #222;
   height: 20px;
   padding: 20px;
-  color: white;
   text-align: center;
+}
+
+.app-header a {
+  color: white;
+  margin-right: 20px;
+}
+
+.app-body {
+  text-align: center;
+  padding: 30px;
 }
 
 .app-logo {

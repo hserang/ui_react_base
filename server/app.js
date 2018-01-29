@@ -1,5 +1,3 @@
-'use strict'
-
 const express = require('express')
 const setupExpress = require('./setupExpress')
 const path = require('path')

@@ -39,6 +39,10 @@ Using three main package
 
 create-react-app comes with ESLint already setup in this repo we just make sure ESLint and Prettier are integrated correctly. To display lint output in your editor just install the plugin and you are good to go. Use `.eslintrc` file to configure more rules and plugings.
 
+# Client side routing
+
+We use [react-router](https://reacttraining.com/react-router/) which is very simple to use and setup. Basic setups are done, enjoy routing in development and production enviroments.
+
 # bash_profile
 
 1. `vim ~/.bash_profile`
