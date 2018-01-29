@@ -43,6 +43,10 @@ create-react-app comes with ESLint already setup in this repo we just make sure 
 
 We use [react-router](https://reacttraining.com/react-router/) which is very simple to use and setup. Basic setups are done, enjoy routing in development and production enviroments.
 
+# Code Splitting
+
+There are two ways to split your code and create chunks for production. First way is to use [dynamic import](https://reactjs.org/docs/code-splitting.html) and the second way is to use react-router and [react-loadable](https://github.com/thejameskyle/react-loadable) as it's described [here](https://serverless-stack.com/chapters/code-splitting-in-create-react-app.html). In this repo the second approach is used. Using react-loadable you can load your async component base on events like route changes or you can preload them base on event like mouse over or even on first time app load. Code spliting helps with load performance and caching.
+
 # bash_profile
 
 1. `vim ~/.bash_profile`
