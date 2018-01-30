@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Loadable from 'react-loadable'
 import AsyncLoading from '../common/AsyncLoading.js'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Home from '../Home'
 import logo from '../common/statics/image/logo.png'
@@ -19,6 +21,7 @@ class App extends Component {
     })
     asyncContact.preload()
 
+    let loading = this.props.isLoading && <div>Loading data ....</div>
     return (
       <Router>
         <div className="app">
@@ -37,10 +40,18 @@ class App extends Component {
               <Route path="/contact" component={asyncContact} />
             </Switch>
           </div>
+          {loading}
         </div>
       </Router>
     )
   }
 }
 
-export default App
+export default connect(
+  state => ({
+    isLoading: state.app.isLoading
+  }),
+  dispatch => ({
+    actions: bindActionCreators({}, dispatch)
+  })
+)(App)

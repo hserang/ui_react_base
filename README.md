@@ -1,11 +1,48 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).You can find the most recent version of guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
-# Global packages
+# Important documentation
 
-```
-npm install -g create-react-app
-npm install -g serve
-```
+* Most updated documentation for [create-react-app](https://github.com/facebook/create-react-app)
+* Latest news in [react blog](https://reactjs.org/blog)
+* [React documentation](https://reactjs.org/docs)
+* [How to think in react](https://reactjs.org/docs/thinking-in-react.html) and break down components
+
+# Basic requirements
+
+## xcode
+
+1. Install xcode from app store
+1. Open xcode and agree to license and finish the installation
+
+## Install node.js and npm
+
+### Install with [homebrew](https://brew.sh/)
+
+1. `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+1. `brew doctor`
+1. `brew install node`
+
+### Install with [nvm](https://github.com/creationix/nvm)
+
+1. `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash`
+1. `nvm install node`
+1. `nvm alias default node`
+
+### Install with [n](https://github.com/tj/n)
+
+1. Follow [readme](https://github.com/tj/n)
+
+## [create-react-app](https://github.com/facebookincubator/create-react-app)
+
+1. `npm install -g create-react-app`
+
+## [serve](https://github.com/zeit/serve)
+
+1. `npm install -g serve`
+
+## [watchman](https://facebook.github.io/watchman/)
+
+1. `brew install watchman`
 
 # Unit test
 
@@ -46,6 +83,29 @@ We use [react-router](https://reacttraining.com/react-router/) which is very sim
 # Code Splitting
 
 There are two ways to split your code and create chunks for production. First way is to use [dynamic import](https://reactjs.org/docs/code-splitting.html) and the second way is to use react-router and [react-loadable](https://github.com/thejameskyle/react-loadable) as it's described [here](https://serverless-stack.com/chapters/code-splitting-in-create-react-app.html). In this repo the second approach is used. Using react-loadable you can load your async component base on events like route changes or you can preload them base on event like mouse over or even on first time app load. Code spliting helps with load performance and caching.
+
+# State managment with Redux
+
+[Redux](https://redux.js.org/) been used in this repo to have a single source of truth for app state. This is very important to make sure all components manage thier internal state and in same time data can be shared and styed immutable. To harvest redux power following packages are used in this repo
+
+* [react-redux](https://github.com/reactjs/react-redux)
+* [redux-thunk](https://github.com/gaearon/redux-thunk)
+* [redux-persit](https://github.com/rt2zz/redux-persist)
+* [localForage](https://github.com/localForage/localForage)
+* [redux-devtools-extension](https://github.com/zalmoxisus/redux-devtools-extension)
+* [redux-logger](https://github.com/evgenyrodionov/redux-logger)
+* [redux-mock-store](https://github.com/arnaudbenard/redux-mock-store)
+
+# Async request
+
+In this repo [axios](https://github.com/axios/axios) is been used, it's a promise based HTTP client for the browser and node. For mocking the calls in unit test [moxios](https://www.npmjs.com/package/moxios) is been used.
+
+# Useful Chrome add-on
+
+* [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
+* [Dom listener](https://chrome.google.com/webstore/detail/domlistener/jlfdgnlpibogjanomigieemaembjeolj?hl=en)
+* [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi/related?hl=en)
+* [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop/related?hl=en)
 
 # bash_profile
 
