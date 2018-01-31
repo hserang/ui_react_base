@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import { Helmet } from 'react-helmet'
 import './style.css'
 
 class Contact extends Component {
@@ -8,6 +9,11 @@ class Contact extends Component {
     let { props } = this
     return (
       <div className="contact">
+        <Helmet>
+          <title>Contact</title>
+          <meta name="description" content="Contact page" />
+          <meta name="author" content="Ripple" />
+        </Helmet>
         <span>{props.msg}</span>
       </div>
     )

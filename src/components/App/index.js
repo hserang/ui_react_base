@@ -4,6 +4,7 @@ import AsyncLoading from '../common/AsyncLoading.js'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 import Home from '../Home'
 import logo from '../common/statics/image/logo.png'
 import './style.css'
@@ -25,6 +26,10 @@ class App extends Component {
     return (
       <Router>
         <div className="app">
+          <Helmet>
+            <meta name="description" content="UI React Based" />
+            <meta name="author" content="Ripple" />
+          </Helmet>
           <div className="app-header">
             <img src={logo} className="app-logo" alt="logo" />
             <div>
