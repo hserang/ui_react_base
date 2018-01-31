@@ -100,6 +100,10 @@ There are two ways to split your code and create chunks for production. First wa
 
 In this repo [axios](https://github.com/axios/axios) is been used, it's a promise based HTTP client for the browser and node. For mocking the calls in unit test [moxios](https://www.npmjs.com/package/moxios) is been used.
 
+# Document head
+
+Manage all changes to the document head using [helmet](https://github.com/nfl/react-helmet)
+
 # Useful Chrome add-on
 
 * [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)

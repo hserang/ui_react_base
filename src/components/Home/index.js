@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import { Helmet } from 'react-helmet'
 import { loadHomeMsg } from './actions'
 import './style.css'
 
@@ -15,6 +16,9 @@ class Home extends Component {
     )
     return (
       <div className="home">
+        <Helmet>
+          <title>Home</title>>
+        </Helmet>
         <div>{props.msg}</div>
         <button type="button" onClick={props.actions.loadHomeMsg}>
           Load Server Msg

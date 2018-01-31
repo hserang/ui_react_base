@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import { Helmet } from 'react-helmet'
 import { loadAboutMsg } from './actions'
 import './style.css'
 
@@ -15,6 +16,12 @@ class About extends Component {
     )
     return (
       <div className="about">
+        <Helmet>
+          <title>About</title>
+          <meta name="description" content="About page" />
+          <meta name="keywords" content="Ripple,XRP" />
+          <meta name="author" content="Ripple" />
+        </Helmet>
         <div>{props.msg}</div>
         <button type="button" onClick={props.actions.loadAboutMsg}>
           Load Server Msg
