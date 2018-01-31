@@ -104,6 +104,33 @@ In this repo [axios](https://github.com/axios/axios) is been used, it's a promis
 
 Manage all changes to the document head using [helmet](https://github.com/nfl/react-helmet)
 
+# Basic security
+
+## Update module dependencies
+
+1. `npm install -g npm-check-updates`
+1. to see the available updates `ncu`
+1. to update the package.json `ncu -u`
+1. [documantation](https://www.npmjs.com/package/npm-check-updates)
+
+## Node Security (nsp)
+
+1. `npm install -g nsp`
+1. to check for security issues run `nsp check --output summary`
+1. [documantation](https://www.npmjs.com/package/nsp)
+
+## Snyk Security for Node.js
+
+1. `npm install -g snyk`
+1. `snyk auth`
+1. to test for vulnerabilities run `snyk test`
+1. follow the steps to fix issues
+1. [documantation](https://snyk.io/)
+
+## Helmetjs
+
+For nodejs and express try to implement all modules suggested by [helmetjs](https://helmetjs.github.io/docs/). The default modules has been implemented in this repo for the rest HTTPS is required
+
 # Useful Chrome add-on
 
 * [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
