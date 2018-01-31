@@ -1,5 +1,46 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).You can find the most recent version of guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
+# Motivation
+
+Team decided to use `create-react-app` as our react boilerplate, to make sure everybody can setup and get stated on in no time here we are adding missing components like routing, state managing and localization.
+Here try to keep it simple and stay focus only on essentials. This repo can be used as
+
+## Base for new project
+
+* `git clone git@github.com:ripple/ui_react_base.git`
+* `npm install`
+* `npm start`
+* `happy coding ...`
+
+## Step by Step toturial
+
+if you are new to react and/or want to know how to setup base packages you can follow the pull requests
+
+1. [Setting express](https://github.com/ripple/ui_react_base/pull/1)
+1. [Unit test and Prettier](https://github.com/ripple/ui_react_base/pull/2)
+1. [ESLint & Prettier](https://github.com/ripple/ui_react_base/pull/3)
+1. [Routing with react-router](https://github.com/ripple/ui_react_base/pull/4)
+1. [Code spliting and chunking](https://github.com/ripple/ui_react_base/pull/5)
+1. [Redux and Async API call](https://github.com/ripple/ui_react_base/pull/6)
+1. [Manage Document head with Helmet](https://github.com/ripple/ui_react_base/pull/7)
+1. [Bundle analyze](https://github.com/ripple/ui_react_base/pull/8)
+1. [Basic security for react and node](https://github.com/ripple/ui_react_base/pull/9)
+1. [Localization with i18next](https://github.com/ripple/ui_react_base/pull/10)
+
+# Further improvements
+
+Because each team/project has different requirements would be useful to consultant knowledge and experience in UI development here.
+
+# TBD
+
+* Integration with GraphQL
+* Integration with Spring
+* Integration with Apollo
+* Integration with CI
+* Automation on E2E testing
+* Server Side rendering
+* Improve SEO
+
 # Important documentation
 
 * Most updated documentation for [create-react-app](https://github.com/facebook/create-react-app)
