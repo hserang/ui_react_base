@@ -3,8 +3,24 @@ const cookieParser = require('cookie-parser')
 const path = require('path')
 const bodyParser = require('body-parser')
 const helmet = require('helmet')
+const i18next = require('i18next')
+const i18nextMiddleware = require('i18next-express-middleware')
+const Backend = require('i18next-node-fs-backend')
 
 module.exports = function(express, app) {
+  i18next
+    .use(Backend)
+    .use(i18nextMiddleware.LanguageDetector)
+    .init({
+      ns: ['translations'], // have a common namespace used around the full app
+      defaultNS: 'translations',
+      backend: {
+        loadPath: path.resolve(__dirname, '..', 'public', 'locales/{{lng}}/{{ns}}.json')
+      },
+      fallbackLng: 'en',
+      preload: ['en']
+    })
+
   // security setup start
   // keep this on top of midelware chain
   app.use(helmet())
@@ -46,6 +62,12 @@ module.exports = function(express, app) {
     next()
   })
   // security setup end
+
+  app.use(
+    i18nextMiddleware.handle(i18next, {
+      removeLngFromUrl: false
+    })
+  )
 
   app.use(cookieParser())
   app.use(
