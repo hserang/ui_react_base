@@ -5,12 +5,14 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+import { translate } from 'react-i18next'
 import Home from '../Home'
 import logo from '../common/statics/image/logo.png'
 import './style.css'
 
 class App extends Component {
   render() {
+    let { t, i18n } = this.props
     const asyncAbout = Loadable({
       loader: () => import('../About'),
       loading: AsyncLoading
@@ -37,6 +39,11 @@ class App extends Component {
               <Link to="/about">About</Link>
               <Link to="/contact">contact</Link>
             </div>
+            <div className="lang">
+              <button onClick={() => i18n.changeLanguage('de')}>de</button>
+              <button onClick={() => i18n.changeLanguage('en')}>en</button>
+              <div>{t('welcome')}</div>
+            </div>
           </div>
           <div className="app-body">
             <Switch>
@@ -59,4 +66,4 @@ export default connect(
   dispatch => ({
     actions: bindActionCreators({}, dispatch)
   })
-)(App)
+)(translate()(App))

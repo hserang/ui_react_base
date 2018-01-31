@@ -131,6 +131,10 @@ Manage all changes to the document head using [helmet](https://github.com/nfl/re
 
 For nodejs and express try to implement all modules suggested by [helmetjs](https://helmetjs.github.io/docs/). The default modules has been implemented in this repo for the rest HTTPS is required
 
+# Localization
+
+There are two options [react-intl](https://github.com/yahoo/react-intl) and [i18next](https://www.i18next.com/) in this repo i18next is been setup you can use it localize in react and nodejs.
+
 # Useful Chrome add-on
 
 * [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
