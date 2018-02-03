@@ -1,11 +1,11 @@
-const session = require('express-session')
-const cookieParser = require('cookie-parser')
-const path = require('path')
-const bodyParser = require('body-parser')
-const helmet = require('helmet')
-const i18next = require('i18next')
-const i18nextMiddleware = require('i18next-express-middleware')
-const Backend = require('i18next-node-fs-backend')
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const path = require('path');
+const bodyParser = require('body-parser');
+const helmet = require('helmet');
+const i18next = require('i18next');
+const i18nextMiddleware = require('i18next-express-middleware');
+const Backend = require('i18next-node-fs-backend');
 
 module.exports = function(express, app) {
   i18next
@@ -19,11 +19,11 @@ module.exports = function(express, app) {
       },
       fallbackLng: 'en',
       preload: ['en']
-    })
+    });
 
   // security setup start
   // keep this on top of midelware chain
-  app.use(helmet())
+  app.use(helmet());
   app.use(
     helmet.contentSecurityPolicy({
       directives: {
@@ -38,45 +38,23 @@ module.exports = function(express, app) {
         frameSrc: ["'self'"]
       }
     })
-  )
-  app.use(function(req, res, next) {
-    let item
-    for (item in req.body) {
-      req.sanitize(item).escape()
-    }
-    for (item in req.params) {
-      req.sanitize(item).escape()
-    }
-    for (item in req.query) {
-      req.sanitize(item).escape()
-    }
-    for (item in res.body) {
-      req.sanitize(item).escape()
-    }
-    for (item in res.params) {
-      req.sanitize(item).escape()
-    }
-    for (item in res.query) {
-      req.sanitize(item).escape()
-    }
-    next()
-  })
+  );
   // security setup end
 
   app.use(
     i18nextMiddleware.handle(i18next, {
       removeLngFromUrl: false
     })
-  )
+  );
 
-  app.use(cookieParser())
+  app.use(cookieParser());
   app.use(
     session({ secret: 'choose_this_secret_key_wisely', resave: false, saveUninitialized: false })
-  )
+  );
   // parse application/x-www-form-urlencoded
-  app.use(bodyParser.urlencoded({ extended: false }))
+  app.use(bodyParser.urlencoded({ extended: false }));
   // json parser
-  app.use(bodyParser.json())
+  app.use(bodyParser.json());
   // Serve static assets
-  app.use(express.static(path.join(__dirname, 'build')))
-}
+  app.use(express.static(path.join(__dirname, 'build')));
+};

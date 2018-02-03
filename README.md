@@ -29,7 +29,7 @@ if you are new to react and/or want to know how to setup base packages you can f
 
 # Further improvements
 
-Because each team/project has different requirements would be useful to consultant knowledge and experience in UI development here.
+Because each team/project has different requirements would be nice if everyone to share their knowledge and experience in UI development here.
 
 # TBD
 
